@@ -1,3 +1,8 @@
+# What's This?
+
+I wanted hands-on experience with MCP servers and AI-assisted coding. This MCP server was written almost entirely by AI, with only a few edits by me to fix hallucinations. [notes.md](/notes.md) has details on my process. Almost everything below here was written by a 🤖 - be appropriately suspicious.
+
+
 # Weather MCP Server
 
 A Model Context Protocol (MCP) server implemented in Go that provides a `get_weather` tool for checking current weather conditions in a given location.
