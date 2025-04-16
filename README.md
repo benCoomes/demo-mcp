@@ -7,11 +7,12 @@ A Model Context Protocol (MCP) server implemented in Go that provides a `get_wea
 - MCP-compliant service with JSON API
 - `get_weather` tool that returns weather data for a location
 - Dockerized for easy deployment and running
+- Supports stdio mode only
 
 ## Prerequisites
 
 - Docker and Docker Compose (for containerized deployment)
-- Go 1.21+ (for local development)
+- Go 1.23+ (for local development)
 
 ## Running the Server
 
@@ -90,9 +91,17 @@ Example Response:
 
 The server provides a health check endpoint at `/health` that returns "OK" when the server is running properly.
 
+## Implementation Details
+
+The server is built using:
+- [mark3labs/mcp-go](https://github.com/mark3labs/mcp-go) v0.21.0 - For MCP server implementation
+
+The MCP server supports:
+- Stdio mode - For direct integration with command-line tools
+
 ## Development
 
-Currently, the weather service returns stubbed data. To implement actual weather data, update the `GetWeather` function in `pkg/weather/weather.go` to integrate with a weather API.
+Currently, the weather service returns stubbed data. To implement actual weather data, update the `GetWeather` function in `pkg/weather/weather.go` to integrate with a weather API of your choice.
 
 ## License
 
